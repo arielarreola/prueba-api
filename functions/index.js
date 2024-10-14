@@ -1,7 +1,9 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const express = require('express');
-
+const cors = require("cors")
+const port = process.env.PORT || 3000;
+app.use(cors())
 
 const app = express();
 admin.initializeApp({
