@@ -3,9 +3,10 @@ const admin = require('firebase-admin');
 const express = require('express');
 const cors = require("cors")
 const port = process.env.PORT || 3000;
-app.use(cors())
+
 
 const app = express();
+app.use(cors())
 admin.initializeApp({
     credential: admin.credential.cert('./credentials.json'),
 });
